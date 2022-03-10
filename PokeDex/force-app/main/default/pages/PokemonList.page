@@ -1,0 +1,57 @@
+<apex:page standardController="Pokemon__c" recordSetVar="pokemon" showHeader="false">
+<div style="padding:2em;">
+
+<h1>AuraForce PokeDex</h1>
+<br/>
+<br/>
+
+
+<apex:panelGrid columns="3" style="width:100%;">
+
+<apex:pageBlock id="myPage">
+    <header>Choose Your Pokemon</header>
+    <div style="height:800px;">
+<ul>
+        <li><input type="checkbox" value="Pikachu">Pikachu</input></li>
+        <li><input type="checkbox" value="Eeevee">Eeevee</input></li>
+        <li><input type="checkbox" value="Snorlax">Snorlax</input></li>
+        <li><input type="checkbox" value="Charizard">Charizard</input></li>
+        <li><input type="checkbox" value="Garchomp">Garchomp</input></li>
+        <li><input type="checkbox" value="Lucario">Lucario</input></li>
+        <li><input type="checkbox" value="Ditto">Ditto</input></li>
+        <li><input type="checkbox" value="Gardevoir">Gardevoir</input></li>
+        <li><input type="checkbox" value="Piplup">Piplup</input></li>
+        <li><input type="checkbox" value="Charmander">Charmander</input></li>
+        <li><input type="checkbox" value="Mewtwo">Mewtwo</input></li>
+        <li><input type="checkbox" value="Squirtle">Squirtle</input></li>
+        <li><input type="checkbox" value="Bulbasaur">Bulbasaur</input></li>
+        <li><input type="checkbox" value="Palkia">Palkia</input></li>
+    </ul>
+
+    </div>
+    
+</apex:pageBlock>
+<apex:pageBlock>
+    
+    <header>Choose Your Team!</header>
+    <div style="height:800px;">
+        <ol>
+            <li>Team 1</li>
+            <li>Team 2</li>
+            <li>Team 3</li>
+        </ol>
+    </div>
+</apex:pageBlock>
+<apex:pageBlock>
+    <header>This Should Be On The Right Side Of The Page</header>
+   <apex:pageBlockTable value="{!pokemon}" var="poke">
+       <apex:column value="{!poke.name}"/>
+
+   </apex:pageBlockTable>
+    
+</apex:pageBlock>
+
+</apex:panelGrid>
+
+</div>
+</apex:page>
